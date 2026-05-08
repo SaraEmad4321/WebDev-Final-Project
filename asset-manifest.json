@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/WebDev-Final-Project/static/css/main.2a7a7589.css",
-    "main.js": "/WebDev-Final-Project/static/js/main.29d0203c.js",
+    "main.js": "/WebDev-Final-Project/static/js/main.5965052e.js",
     "static/js/453.56b22040.chunk.js": "/WebDev-Final-Project/static/js/453.56b22040.chunk.js",
     "static/media/meter2.png": "/WebDev-Final-Project/static/media/meter2.26f8012be15482c79202.png",
     "static/media/meter1.png": "/WebDev-Final-Project/static/media/meter1.768d468c12fe69004953.png",
@@ -21,17 +21,17 @@
     "static/media/My_CV.pdf": "/WebDev-Final-Project/static/media/My_CV.52aaaf88bbd59a5e6685.pdf",
     "static/media/revicons.woff": "/WebDev-Final-Project/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/meter3.svg": "/WebDev-Final-Project/static/media/meter3.2eda919df32db1af75a222eb99d3a931.svg",
-    "static/media/logo.svg": "/WebDev-Final-Project/static/media/logo.3c6c479cfa1d154dbfccd4d5f91320f4.svg",
     "static/media/nav-icon3.svg": "/WebDev-Final-Project/static/media/nav-icon3.72cef43bc93b04f52e29f022ef720f8b.svg",
+    "static/media/logo.svg": "/WebDev-Final-Project/static/media/logo.3c6c479cfa1d154dbfccd4d5f91320f4.svg",
     "index.html": "/WebDev-Final-Project/index.html",
     "static/media/nav-icon1.svg": "/WebDev-Final-Project/static/media/nav-icon1.dff40ae802524d8fc0cbce3f312abe4f.svg",
     "static/media/nav-icon2.svg": "/WebDev-Final-Project/static/media/nav-icon2.a39f0e5e47e442dafcc5c9c320f19f6f.svg",
     "main.2a7a7589.css.map": "/WebDev-Final-Project/static/css/main.2a7a7589.css.map",
-    "main.29d0203c.js.map": "/WebDev-Final-Project/static/js/main.29d0203c.js.map",
+    "main.5965052e.js.map": "/WebDev-Final-Project/static/js/main.5965052e.js.map",
     "453.56b22040.chunk.js.map": "/WebDev-Final-Project/static/js/453.56b22040.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a7a7589.css",
-    "static/js/main.29d0203c.js"
+    "static/js/main.5965052e.js"
   ]
 }
