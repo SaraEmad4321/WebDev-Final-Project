@@ -1,0 +1,49 @@
+<svg width="204" height="214" viewBox="0 0 214 214" fill="none" xmlns="http://www.w3.org/2000/svg" style="">
+<defs>
+  <linearGradient id="arcGrad95" x1="-12" y1="91" x2="228" y2="92" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E8C97A"/>
+    <stop offset="1" stop-color="#C4974A"/>
+  </linearGradient>
+  <radialGradient id="glowBg95" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#E8C97A" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#E8C97A" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="innerFill95" cx="38%" cy="36%" r="62%">
+    <stop offset="0%" stop-color="#1C1A10"/>
+    <stop offset="100%" stop-color="#0D0D0D"/>
+  </radialGradient>
+  <linearGradient id="trackGrad95" x1="-12" y1="91" x2="228" y2="92" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E8C97A" stop-opacity="0.1"/>
+    <stop offset="1" stop-color="#C4974A" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+
+<!-- Outer ambient glow -->
+<circle cx="102" cy="102" r="102" fill="url(#glowBg95)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- r=89, circumference=559.2, track(270°)=419.4, 95%=419.4×0.95≈398.4 -->
+
+<!-- Track arc -->
+<circle cx="102" cy="102" r="89" fill="none" stroke="url(#trackGrad95)" stroke-width="16" stroke-dasharray="419.4 559.2" stroke-dashoffset="-104.9" stroke-linecap="round" style="fill:none;color:rgb(255, 255, 255);stroke-width:16px;stroke-dasharray:419.4px, 559.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Active arc 95% -->
+<circle cx="102" cy="102" r="89" fill="none" stroke="url(#arcGrad95)" stroke-width="16" stroke-dasharray="398.4 559.2" stroke-dashoffset="-104.9" stroke-linecap="round" style="fill:none;color:rgb(255, 255, 255);stroke-width:16px;stroke-dasharray:398.4px, 559.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Inner dark circle -->
+<circle cx="102" cy="102" r="72" fill="url(#innerFill95)" stroke="#E8C97A" stroke-opacity="0.12" stroke-width="0.8" style="stroke:rgb(232, 201, 122);color:rgb(255, 255, 255);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="102" cy="102" r="68" fill="none" stroke="#E8C97A" stroke-opacity="0.06" stroke-width="0.5" style="fill:none;stroke:rgb(232, 201, 122);color:rgb(255, 255, 255);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Specular inner highlight -->
+<ellipse cx="88" cy="82" rx="22" ry="14" fill="#F5DFA0" fill-opacity="0.04" transform="rotate(-20 88 82)" style="fill:rgb(245, 223, 160);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- "95%" text -->
+<text x="102" y="109" font-family="'Syne', 'DM Serif Display', sans-serif" font-size="26" font-weight="700" fill="#F0EDE6" text-anchor="middle" letter-spacing="-0.5" style="fill:rgb(240, 237, 230);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Syne, &quot;DM Serif Display&quot;, sans-serif;font-size:26px;font-weight:700;text-anchor:middle;dominant-baseline:auto">95%</text>
+
+<!-- Glowing tip dot at 95% -->
+<!-- 135° + (0.95 × 270°) = 135° + 256.5° = 391.5° = 31.5° -->
+<!-- x = 102 + 89×cos(31.5°) = 102 + 75.9 = 177.9, y = 102 + 89×sin(31.5°) = 102 + 46.5 = 148.5 -->
+<circle cx="178" cy="149" r="5" fill="#F5DFA0" fill-opacity="0.9" style="fill:rgb(245, 223, 160);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="178" cy="149" r="9" fill="#E8C97A" fill-opacity="0.2" style="fill:rgb(232, 201, 122);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="178" cy="149" r="14" fill="#E8C97A" fill-opacity="0.07" style="fill:rgb(232, 201, 122);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>
