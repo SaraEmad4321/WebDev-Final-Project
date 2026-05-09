@@ -10,7 +10,7 @@
 }
 
 :root {
-  --bg: #0D0D0D;
+  --bg: #121212;
   --surface: #141414;
   --surface-2: #1C1C1C;
   --border: rgba(255, 255, 255, 0.08);
@@ -399,6 +399,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 80px;
   position: relative;
+  background-color: var(--bg);
 }
 
 .skill-bx {
@@ -409,6 +410,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 70px 60px;
   margin-top: -60px;
   position: relative;
+
 }
 
 .skill-bx::before {
@@ -428,6 +430,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: var(--text-primary);
   position: relative;
   z-index: 1;
+}
+
+.skill h5 {
+  color: #F0EDE6;
 }
 
 .skill p {
@@ -459,15 +465,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill-slider .item img:hover {
   opacity: 1;
   filter: grayscale(0%);
-}
-
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-  opacity: 0.4;
 }
 
 /************ Projects ************/
@@ -808,6 +805,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer {
   border-top: 1px solid var(--border);
   padding: 40px 0;
+  background-color: var(--bg);
 }
 
 .footer img {

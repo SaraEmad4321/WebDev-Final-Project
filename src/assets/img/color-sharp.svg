@@ -1,0 +1,40 @@
+<svg width="786" height="1046" viewBox="0 0 786 1046" fill="none" xmlns="http://www.w3.org/2000/svg" style="">
+<defs>
+  <!-- Main gold bloom — left-center, matching original glow position -->
+  <radialGradient id="goldBloom" cx="22%" cy="44%" r="52%">
+    <stop offset="0%" stop-color="#E8C97A" stop-opacity="0.28"/>
+    <stop offset="35%" stop-color="#C4974A" stop-opacity="0.14"/>
+    <stop offset="70%" stop-color="#C4974A" stop-opacity="0.04"/>
+    <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Secondary amber warm core -->
+  <radialGradient id="amberCore" cx="18%" cy="46%" r="28%">
+    <stop offset="0%" stop-color="#F5DFA0" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#E8C97A" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Purple-gold mid bloom like the original blue-purple -->
+  <radialGradient id="purpleBloom" cx="38%" cy="55%" r="42%">
+    <stop offset="0%" stop-color="#9B6BFF" stop-opacity="0.12"/>
+    <stop offset="50%" stop-color="#5B3BCC" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0"/>
+  </radialGradient>
+
+  <!-- Deep amber edge bleed bottom-left -->
+  <radialGradient id="bottomBleed" cx="15%" cy="82%" r="35%">
+    <stop offset="0%" stop-color="#C4974A" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#0D0D0D" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- Base black -->
+<rect width="786" height="1046" fill="#0D0D0D" style="fill:rgb(13, 13, 13);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Layered glows -->
+<rect width="786" height="1046" fill="url(#purpleBloom)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<rect width="786" height="1046" fill="url(#goldBloom)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<rect width="786" height="1046" fill="url(#amberCore)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<rect width="786" height="1046" fill="url(#bottomBleed)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>

@@ -1,0 +1,63 @@
+<svg width="204" height="214" viewBox="0 0 214 214" fill="none" xmlns="http://www.w3.org/2000/svg" style="">
+<defs>
+  <linearGradient id="arcGrad80" x1="-12" y1="91" x2="228" y2="92" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E8C97A"/>
+    <stop offset="1" stop-color="#C4974A"/>
+  </linearGradient>
+  <radialGradient id="glowBg80" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#E8C97A" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#E8C97A" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="innerFill80" cx="38%" cy="36%" r="62%">
+    <stop offset="0%" stop-color="#1C1A10"/>
+    <stop offset="100%" stop-color="#0D0D0D"/>
+  </radialGradient>
+  <linearGradient id="trackGrad80" x1="-12" y1="91" x2="228" y2="92" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#E8C97A" stop-opacity="0.1"/>
+    <stop offset="1" stop-color="#C4974A" stop-opacity="0.1"/>
+  </linearGradient>
+</defs>
+
+<!-- Outer ambient glow -->
+<circle cx="102" cy="102" r="102" fill="url(#glowBg80)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Track arc (full 270°, dim) -->
+<path d="M187.639 69.9021C193.092 67.8586 199.226 70.6143 200.696 76.2484C206.238 97.4863 204.802 120.051 196.436 140.546C186.737 164.31 168.435 183.543 145.182 194.409C121.928 205.275 95.4333 206.975 70.9821 199.169C46.5309 191.364 25.9211 174.628 13.2642 152.299C0.607328 129.97 -3.16618 103.69 2.6965 78.7016C8.55918 53.7134 23.627 31.854 44.8941 17.4842C66.1612 3.11439 92.0641 -2.7094 117.435 1.17464C139.317 4.52444 159.415 14.8827 174.791 30.5466C178.869 34.702 178.083 41.3805 173.529 45.009C168.975 48.6374 162.385 47.8272 158.195 43.7832C146.212 32.2155 130.877 24.5642 114.244 22.0179C94.1181 18.9368 73.5701 23.5566 56.6994 34.9558C39.8288 46.355 27.8758 63.6955 23.2251 83.518C18.5744 103.34 21.5679 124.188 31.6082 141.901C41.6486 159.614 57.9979 172.89 77.3943 179.082C96.7908 185.274 117.809 183.925 136.255 175.305C154.701 166.686 169.219 151.429 176.914 132.578C183.273 116.999 184.584 99.9117 180.815 83.688C179.497 78.0164 182.187 71.9457 187.639 69.9021Z" fill="url(#trackGrad80)" style="stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Active arc — 80% = ~216° of 270°. Clipped with a masking wedge to cut the last 20% -->
+<!-- The full arc goes from ~135° to ~45° clockwise (270° span). 80% = 216°, so we stop at ~351° (i.e. cut ~54° from the end near the start point). We use a clipPath pie slice to mask the inactive portion. -->
+<clipPath id="arc80clip">
+  <!-- Large rectangle covers everything, minus a wedge that hides the last 20% of the arc.
+       The arc ends (inactive gap) is near top-right. We block from ~15° to ~45° (the last ~54° of the 270° span). -->
+  <path d="M102 102 L204 0 L204 -20 L-20 -20 L-20 224 L224 224 L224 -20 L102 102 Z"/>
+  <!-- Pie slice to cut: from center, angle ~350° to ~45° (the dim 20% tail near top-right start) -->
+  <!-- We keep everything EXCEPT the wedge from 350° back to 135° going clockwise through the gap -->
+  <!-- Simpler: clip to a polygon that covers 80% of the arc area -->
+  <polygon points="&#10;    102,102&#10;    204,102&#10;    204,0&#10;    102,0&#10;    0,0&#10;    0,102&#10;    0,204&#10;    102,204&#10;    204,204&#10;    204,120&#10;    190,75&#10;  "/>
+</clipPath>
+
+<!-- Better approach: use stroke-dasharray on a circle for precise 80% -->
+<!-- Arc is a thick stroked circle, 270° span = 3/4 of circumference, starting at 135° -->
+<!-- r=89 => circumference = 2π×89 ≈ 559.2. Track = 270°/360° × 559.2 ≈ 419.4. 80% of track = 335.5 -->
+<circle cx="102" cy="102" r="89" fill="none" stroke="url(#trackGrad80)" stroke-width="16" stroke-dasharray="419.4 559.2" stroke-dashoffset="-104.9" stroke-linecap="round" style="fill:none;color:rgb(255, 255, 255);stroke-width:16px;stroke-dasharray:419.4px, 559.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<circle cx="102" cy="102" r="89" fill="none" stroke="url(#arcGrad80)" stroke-width="16" stroke-dasharray="335.5 559.2" stroke-dashoffset="-104.9" stroke-linecap="round" style="fill:none;color:rgb(255, 255, 255);stroke-width:16px;stroke-dasharray:335.5px, 559.2px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Inner dark circle -->
+<circle cx="102" cy="102" r="72" fill="url(#innerFill80)" stroke="#E8C97A" stroke-opacity="0.12" stroke-width="0.8" style="stroke:rgb(232, 201, 122);color:rgb(255, 255, 255);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="102" cy="102" r="68" fill="none" stroke="#E8C97A" stroke-opacity="0.06" stroke-width="0.5" style="fill:none;stroke:rgb(232, 201, 122);color:rgb(255, 255, 255);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Specular inner highlight -->
+<ellipse cx="88" cy="82" rx="22" ry="14" fill="#F5DFA0" fill-opacity="0.04" transform="rotate(-20 88 82)" style="fill:rgb(245, 223, 160);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- "80%" text — using font rendering via foreignObject for crisp display -->
+<!-- Rendered as paths matching the design font style -->
+<text x="102" y="109" font-family="'Syne', 'DM Serif Display', sans-serif" font-size="26" font-weight="700" fill="#F0EDE6" text-anchor="middle" letter-spacing="-0.5" style="fill:rgb(240, 237, 230);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Syne, &quot;DM Serif Display&quot;, sans-serif;font-size:26px;font-weight:700;text-anchor:middle;dominant-baseline:auto">80%</text>
+
+<!-- Glowing tip dot at arc end (~80% along the track, at ~351°) -->
+<!-- 135° + 216° = 351°. x = 102 + 89×cos(351°) = 102+87.8=189.8, y = 102 + 89×sin(351°) = 102-16.9=85.1 -->
+<circle cx="189" cy="85" r="5" fill="#F5DFA0" fill-opacity="0.9" style="fill:rgb(245, 223, 160);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="189" cy="85" r="9" fill="#E8C97A" fill-opacity="0.2" style="fill:rgb(232, 201, 122);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+<circle cx="189" cy="85" r="14" fill="#E8C97A" fill-opacity="0.07" style="fill:rgb(232, 201, 122);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>

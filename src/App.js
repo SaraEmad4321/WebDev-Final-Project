@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar';
-import {Banner} from './Components/Banner';
-import { Skills} from './Components/Skills';
+import { Banner } from './Components/Banner';
+import { Skills } from './Components/Skills';
 import Projects from './Components/Projects';
-import {Newsletter} from './Components/Newsletter';
-import {Contact} from './Components/Contact';
+import { Newsletter } from './Components/Newsletter';
+import { Contact } from './Components/Contact';
 import { Footer } from './Components/Footer';
 
 function App() {
@@ -14,10 +13,10 @@ function App() {
       <NavBar />
       <Banner />
       <Skills />
-      <Projects/>
-      <Contact/>
-      <Newsletter/>
-      <Footer/>
+      <Projects />
+      <Contact />
+      <Newsletter />
+      <Footer />
     </div>
   );
 }
